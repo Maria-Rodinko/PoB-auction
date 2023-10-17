@@ -48,16 +48,7 @@ public class NormalDistributionTest {
             int i = 0, sp = 0, hp = 0;
             int participantsNumber = new Random().nextInt(maxParticipants) + 1;
             for(CoinType coinType : coinTypes){
-                /*for(int gg = 0; gg < lost_bids.size(); gg++) {
-                    if(lost_bids.get(gg).id.equals("strategic participant")) {
-                        sp++;
-                    }
-                    if(lost_bids.get(gg).id.equals("honest participant")) {
-                        hp++;
-                    }
-                }*/
                 auction.add_bids(Utils.generate_normal_bids(coinType, participantsNumber, pr[i], r[i]));
-                /*2-hp, 1-sp,*/
                 i++;
             }
             // Generating new random bids with unspent coins from previous auction
